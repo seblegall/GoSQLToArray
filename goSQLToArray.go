@@ -1,4 +1,4 @@
-package gosqljson
+package gosqltoarray
 
 import (
 	"database/sql"
