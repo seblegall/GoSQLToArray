@@ -30,6 +30,8 @@ func QueryDbToArray(db *sql.DB, theCase string, sqlStatement string, sqlParams .
 	rows, err := db.Query(sqlStatement, sqlParams...)
 	if err != nil {
 		fmt.Println("Error executing: ", sqlStatement)
+		fmt.Println(err.Error())
+
 		return results, err
 	}
 	cols, _ := rows.Columns()
